@@ -162,7 +162,8 @@ footer {
 }
 
 .help-hero,
-.feedback-hero {
+.feedback-hero,
+.about-hero {
     text-align: center;
     padding: 75px 20px 65px;
     background: linear-gradient(135deg, #e7efff, #f5f8ff);
@@ -176,19 +177,22 @@ footer {
 }
 
 .help-hero h1,
-.feedback-hero h1 {
+.feedback-hero h1,
+.about-hero h1 {
     font-size: 42px;
     margin: 18px 0;
     color: #172554;
 }
 
 .help-hero h1 span,
-.feedback-hero h1 span {
+.feedback-hero h1 span,
+.about-hero h1 span {
     color: #3975ed;
 }
 
 .help-hero p,
-.feedback-hero p {
+.feedback-hero p,
+.about-hero p {
     color: #64748b;
     max-width: 600px;
     line-height: 1.7;
@@ -469,6 +473,210 @@ footer {
     font-size: 14px;
 }
 
+/* ABOUT BCA PAGE */
+
+.about-container {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+.about-overview {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+    margin-bottom: 55px;
+}
+
+.about-text h2 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.about-text p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.stat-box {
+    background: #f1f5ff;
+    padding: 24px 18px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #dbe8ff;
+}
+
+.stat-box h3 {
+    color: #3975ed;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.stat-box p {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about-section {
+    margin-bottom: 55px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+.bca-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.bca-card {
+    background: #ffffff;
+    padding: 28px 24px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.bca-card:hover {
+    border-color: #9bb9f8;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(57, 117, 237, 0.08);
+}
+
+.bca-icon {
+    display: inline-block;
+    background: #e4edff;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.bca-card h3 {
+    color: #172554;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.bca-card p {
+    color: #64748b;
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.roadmap-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.year-badge {
+    display: inline-block;
+    background: #dbe8ff;
+    color: #245bd0;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.roadmap-card h3 {
+    color: #172554;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.roadmap-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-card ul li {
+    color: #475569;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.roadmap-card ul li:last-child {
+    border-bottom: none;
+}
+
+.roadmap-card ul li::before {
+    content: "✓";
+    color: #3975ed;
+    font-weight: bold;
+}
+
+.career-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.career-tag {
+    background: #ffffff;
+    color: #172554;
+    border: 1px solid #cbd5e1;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.career-tag:hover {
+    background: #3975ed;
+    color: #ffffff;
+    border-color: #3975ed;
+}
+
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 768px) {
@@ -483,8 +691,19 @@ footer {
     }
 
     .help-hero h1,
-    .feedback-hero h1 {
+    .feedback-hero h1,
+    .about-hero h1 {
         font-size: 32px;
+    }
+
+    .about-overview {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .bca-grid,
+    .roadmap-grid {
+        grid-template-columns: 1fr;
     }
 
     .contact-card {
