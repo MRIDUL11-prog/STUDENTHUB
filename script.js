@@ -21,18 +21,74 @@ if (buttons.length >= 2) {
 document.querySelectorAll(".faq-question").forEach(button => {
     button.addEventListener("click", () => {
         const currentItem = button.parentElement;
+        const willOpen = !currentItem.classList.contains("open");
 
         // Close other FAQ items
         document.querySelectorAll(".faq-item").forEach(item => {
             if (item !== currentItem) {
                 item.classList.remove("open");
+                const otherButton = item.querySelector(".faq-question");
+                if (otherButton) {
+                    otherButton.setAttribute("aria-expanded", "false");
+                }
             }
         });
 
         // Toggle selected FAQ
         currentItem.classList.toggle("open");
+        button.setAttribute("aria-expanded", String(willOpen));
     });
 });
+
+// FAQ search and category filters
+const faqSearch = document.getElementById("faqSearch");
+const faqFilterButtons = document.querySelectorAll(".faq-filter-btn");
+const faqItems = document.querySelectorAll(".faq-list .faq-item");
+const faqNoResults = document.getElementById("faqNoResults");
+let activeFaqFilter = "all";
+
+function filterFaqItems() {
+    if (!faqSearch) {
+        return;
+    }
+
+    const query = faqSearch.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    faqItems.forEach(item => {
+        const categoryMatches =
+            activeFaqFilter === "all" ||
+            item.dataset.category === activeFaqFilter;
+        const textMatches =
+            !query ||
+            item.textContent.toLowerCase().includes(query);
+        const isVisible = categoryMatches && textMatches;
+
+        item.hidden = !isVisible;
+        if (isVisible) {
+            visibleCount++;
+        }
+    });
+
+    if (faqNoResults) {
+        faqNoResults.hidden = visibleCount !== 0;
+    }
+}
+
+if (faqSearch) {
+    faqSearch.addEventListener("input", filterFaqItems);
+
+    faqFilterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            activeFaqFilter = button.dataset.filter;
+            faqFilterButtons.forEach(filterButton => {
+                filterButton.classList.remove("active");
+            });
+            button.classList.add("active");
+            filterFaqItems();
+        });
+    });
+}
 
 
 // ================================

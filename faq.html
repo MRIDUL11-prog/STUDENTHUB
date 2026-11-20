@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="support-page">
+
+    <header class="support-header">
+        <a href="index.html" class="support-logo">Student<span>Hub.</span></a>
+
+        <nav class="support-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="faq.html" class="active">FAQ</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="help-hero faq-hero">
+            <span class="hero-tag">FIND YOUR ANSWER</span>
+            <h1>Frequently Asked <span>Questions</span></h1>
+            <p>Browse answers about StudentHub, BCA resources, accounts and academic tools.</p>
+
+            <div class="faq-search">
+                <label class="faq-search-icon" for="faqSearch" aria-hidden="true">⌕</label>
+                <input id="faqSearch" type="search" placeholder="Search frequently asked questions..." autocomplete="off">
+            </div>
+        </section>
+
+        <section class="help-content faq-content">
+            <div class="faq-filter" aria-label="Filter questions">
+                <button class="faq-filter-btn active" type="button" data-filter="all">All Questions</button>
+                <button class="faq-filter-btn" type="button" data-filter="studenthub">StudentHub</button>
+                <button class="faq-filter-btn" type="button" data-filter="account">Account</button>
+                <button class="faq-filter-btn" type="button" data-filter="academics">Academics</button>
+            </div>
+
+            <div class="faq-list" id="faqList">
+                <article class="faq-item" data-category="studenthub">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        What is StudentHub?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>StudentHub is an all-in-one academic platform for students to explore BCA resources, learn about courses and tools, and track academic information.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="studenthub">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Is StudentHub free to use?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The StudentHub resources and tools displayed on this website are available to students at no cost.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="account">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Do I need to create an account?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>An account is not required to view public pages or use the CGPA calculator. Account registration may be required for future personalized features.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="account">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        What should I do if I forget my password?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If password recovery is enabled for your account, select "Forgot Password" on the login page and follow the verification instructions.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="academics">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        How does the CGPA calculator work?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Enter the course grades or grade points and credit values for each subject. The calculator uses their weighted average to estimate your CGPA.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="academics">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Are the BCA resources organized by semester?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The About page includes a three-year BCA roadmap covering the subjects and learning areas commonly found in the six semesters.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="studenthub">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        How can I suggest a new feature or report a problem?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Open the Feedback page and describe your suggestion or issue. Include clear details so that the request can be reviewed effectively.</p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-category="studenthub">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Can I use StudentHub on my phone?
+                        <span aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. StudentHub is built with a responsive layout that works across desktop, tablet and mobile screen sizes.</p>
+                    </div>
+                </article>
+            </div>
+
+            <p class="faq-no-results" id="faqNoResults" hidden>No matching questions found.</p>
+
+            <section class="contact-card">
+                <div>
+                    <span class="contact-icon">✉</span>
+                    <h2>Still have a question?</h2>
+                    <p>Send us a message and help us improve StudentHub for every student.</p>
+                </div>
+                <a href="feedback.html" class="support-btn">Ask a Question →</a>
+            </section>
+        </section>
+    </main>
+
+    <footer class="support-footer">
+        <p>© 2026 StudentHub. Made for students, by students.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
