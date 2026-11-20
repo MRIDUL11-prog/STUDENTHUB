@@ -1,0 +1,207 @@
+.cgpa-hero {
+    text-align: center;
+    padding: 75px 20px 55px;
+    background: linear-gradient(135deg, #e7efff, #f5f8ff);
+}
+
+.cgpa-hero h1 {
+    color: #172554;
+    font-size: 42px;
+    margin: 18px 0;
+}
+
+.cgpa-hero h1 span {
+    color: #3975ed;
+}
+
+.cgpa-hero p {
+    max-width: 620px;
+    margin: auto;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.cgpa-container {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.cgpa-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    padding: 30px;
+}
+
+.cgpa-card h2 {
+    color: #172554;
+    margin-bottom: 22px;
+}
+
+.subject-form .form-group {
+    margin-bottom: 18px;
+}
+
+.subject-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subject-form input,
+.subject-form select {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    font: inherit;
+    padding: 10px 12px;
+    outline: none;
+}
+
+.subject-form input:focus,
+.subject-form select:focus {
+    border-color: #3975ed;
+    box-shadow: 0 0 0 3px rgba(57, 117, 237, 0.1);
+}
+
+.subject-form input.invalid,
+.subject-form select.invalid {
+    border-color: #dc2626;
+}
+
+.cgpa-primary-btn {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #3975ed;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cgpa-primary-btn:hover {
+    background: #245bd0;
+}
+
+.cgpa-error {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.subjects-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cgpa-clear-btn,
+.remove-subject-btn {
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.cgpa-clear-btn {
+    background: #eef2ff;
+    color: #245bd0;
+    padding: 9px 13px;
+    font-weight: 600;
+}
+
+.subject-table-wrap {
+    overflow-x: auto;
+}
+
+.subject-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.subject-table th,
+.subject-table td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 8px;
+    text-align: left;
+    color: #475569;
+}
+
+.subject-table th {
+    color: #172554;
+    font-size: 13px;
+}
+
+.subject-table td {
+    font-size: 14px;
+}
+
+.remove-subject-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 7px 9px;
+    font-size: 13px;
+}
+
+.empty-subjects {
+    padding: 25px 0;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.cgpa-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 16px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: #f1f5ff;
+    color: #334155;
+}
+
+.cgpa-result strong {
+    color: #3975ed;
+    font-size: 32px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .cgpa-hero h1 {
+        font-size: 32px;
+    }
+
+    .cgpa-container {
+        grid-template-columns: 1fr;
+        margin: 35px auto;
+    }
+
+    .cgpa-card {
+        padding: 23px 18px;
+    }
+}
