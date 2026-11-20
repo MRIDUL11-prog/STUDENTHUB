@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator | StudentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cgpa.css">
+</head>
+<body class="support-page">
+    <header class="support-header">
+        <a href="index.html" class="support-logo">Student<span>Hub.</span></a>
+
+        <nav class="support-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="cgpa.html" class="active">CGPA Calculator</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cgpa-hero">
+            <span class="hero-tag">ACADEMIC PERFORMANCE</span>
+            <h1>StudentHub <span>CGPA Calculator</span></h1>
+            <p>Add each subject with its credit value and grade to calculate your weighted CGPA.</p>
+        </section>
+
+        <section class="cgpa-container">
+            <div class="cgpa-card">
+                <h2>Add a Subject</h2>
+
+                <form id="subjectForm" class="subject-form" novalidate>
+                    <div class="form-group">
+                        <label for="subjectName">Subject Name</label>
+                        <input type="text" id="subjectName" placeholder="e.g. Web Development">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjectCredits">Credits</label>
+                        <input type="number" id="subjectCredits" min="1" step="1" placeholder="e.g. 4">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subjectGrade">Grade</label>
+                        <select id="subjectGrade">
+                            <option value="">Select grade</option>
+                            <option value="O">O - 10</option>
+                            <option value="A+">A+ - 9</option>
+                            <option value="A">A - 8</option>
+                            <option value="B+">B+ - 7</option>
+                            <option value="B">B - 6</option>
+                            <option value="C">C - 5</option>
+                            <option value="F">F - 0</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="cgpa-primary-btn">Add Subject</button>
+                    <p id="cgpaError" class="cgpa-error" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <div class="cgpa-card subjects-card">
+                <div class="subjects-heading">
+                    <h2>Subjects</h2>
+                    <button type="button" id="clearAllBtn" class="cgpa-clear-btn">Clear All</button>
+                </div>
+
+                <div class="subject-table-wrap">
+                    <table class="subject-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Credits</th>
+                                <th>Grade</th>
+                                <th>Points</th>
+                                <th><span class="sr-only">Action</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="subjectTableBody"></tbody>
+                    </table>
+                    <p id="emptySubjects" class="empty-subjects">No subjects added yet.</p>
+                </div>
+
+                <div class="cgpa-result" aria-live="polite">
+                    <span>Your CGPA</span>
+                    <strong id="cgpaResult">0.00</strong>
+                </div>
+
+                <button type="button" id="calculateCgpaBtn" class="cgpa-primary-btn calculate-btn">
+                    Calculate CGPA
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="support-footer">
+        <p>© 2026 StudentHub. Made for students, by students.</p>
+    </footer>
+
+    <script src="cgpa.js"></script>
+</body>
+</html>
